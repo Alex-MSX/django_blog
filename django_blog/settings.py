@@ -75,29 +75,26 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 DEBUG = True
 ALLOWED_HOSTS = ['djangoblogams.herokuapp.com','127.0.0.1']
 
-BASE = True
 
-if BASE:
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'd70v35lhcvs3r7',
-            'USER': 'esynvzlavtenrv',
-            'PASSWORD': 'ab0a473682eddc01d62ceef5f848ff2b6f09dde43fbb2f2652ab6fed74234500',
-            'HOST': 'ec2-18-215-99-63.compute-1.amazonaws.com',
-            'PORT': 5432
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'd70v35lhcvs3r7',
+        'USER': 'esynvzlavtenrv',
+        'PASSWORD': 'ab0a473682eddc01d62ceef5f848ff2b6f09dde43fbb2f2652ab6fed74234500',
+        'HOST': 'ec2-18-215-99-63.compute-1.amazonaws.com',
+        'PORT': 5432
     }
-else:
+}
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
