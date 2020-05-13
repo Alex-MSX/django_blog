@@ -73,23 +73,24 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 # SECURITY WARNING: don't run with debug turned on in production!
 PRODUCCION = False
 
+ALLOWED_HOSTS = ['djangoblogams.herokuapp.com','127.0.0.1']
+
 if PRODUCCION:
     DEBUG = False
-    ALLOWED_HOSTS = ['djangoblogams.herokuapp.com']
+
 
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
+            'NAME': 'd70v35lhcvs3r7',
+            'USER': 'esynvzlavtenrv',
+            'PASSWORD': 'ab0a473682eddc01d62ceef5f848ff2b6f09dde43fbb2f2652ab6fed74234500',
+            'HOST': 'ec2-18-215-99-63.compute-1.amazonaws.com',
             'PORT': 5432
         }
     }
 else:
     DEBUG = True
-    ALLOWED_HOSTS = []
 
     DATABASES = {
         'default': {
