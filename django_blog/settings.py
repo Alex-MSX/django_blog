@@ -78,7 +78,7 @@ ALLOWED_HOSTS = ['djangoblogams.herokuapp.com','127.0.0.1']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd70v35lhcvs3r7',
         'USER': 'esynvzlavtenrv',
         'PASSWORD': 'ab0a473682eddc01d62ceef5f848ff2b6f09dde43fbb2f2652ab6fed74234500',
