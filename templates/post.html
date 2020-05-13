@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+  {{ publicacion.titulo }}
+{% endblock %}
+
+{% block imagen %}
+  {{ publicacion.imagen }}
+{% endblock %}
+
+{% block titulo_principal %}
+  <h1>{{ publicacion.titulo }}</h1>
+  <p>{{ publicacion.descripcion }}</p>
+{% endblock %}
+
+{% block contenido %}
+  {{ publicacion.contenido|safe }}
+{% endblock %}
+
+{% block barra_busqueda %}
+{% endblock %}
