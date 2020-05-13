@@ -75,7 +75,8 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 DEBUG = True
 ALLOWED_HOSTS = ['djangoblogams.herokuapp.com','127.0.0.1']
 
-BASE = False
+BASE = True
+
 if BASE:
 
     DATABASES = {
