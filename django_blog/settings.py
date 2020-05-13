@@ -71,13 +71,12 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 # SECURITY WARNING: don't run with debug turned on in production!
-PRODUCCION = False
 
+DEBUG = True
 ALLOWED_HOSTS = ['djangoblogams.herokuapp.com','127.0.0.1']
 
-if PRODUCCION:
-    DEBUG = False
-
+BASE = False
+if BASE:
 
     DATABASES = {
         'default': {
@@ -90,7 +89,6 @@ if PRODUCCION:
         }
     }
 else:
-    DEBUG = True
 
     DATABASES = {
         'default': {
